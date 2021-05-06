@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <h1 class="text-center">User Registration</h1>
+    <button type="button" (click)="userForm()" class="btn btn-primary btn-lg btn-block">User Registration Form</button>
+    <button type="button" (click)="userFormDisable()" class="btn btn-secondary btn-lg btn-block">Clear</button>
+    <form [formGroup] = "UserForm" (ngSubmit)="onSubmit()" *ngIf = "isVisible">
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>UserEmail</label>
+            <input formControlName="email" type="text"  class="form-control" [(ngModel)]="userdetails.user_email">
+             <!-- #refname>{{refname.className}} -->
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Password</label>
+            <input formControlName="password" type="password"  class="form-control" [(ngModel)]="userdetails.user_password">
+             <!-- #refname>{{refname.className}} -->
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Full Name</label>
+            <input formControlName="fullname" type="text" [(ngModel)]="userdetails.user_full_Name" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Gender</label>
+            <input formControlName="gender" type="text" [(ngModel)]="userdetails.user_gender" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Age</label>
+            <input formControlName="age" type="text" [(ngModel)]="userdetails.user_age" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Phone Number</label>
+            <input formControlName="phoneno" type="number" [(ngModel)]="userdetails.user_phone_Number" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Addr</label>
+            <input formControlName="addr" type="text" [(ngModel)]="userdetails.user_address" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User State</label>
+            <input formControlName="state" type="text" [(ngModel)]="userdetails.user_state" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User City</label>
+            <input formControlName="city" type="text" [(ngModel)]="userdetails.user_city" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User PinCode</label>
+            <input formControlName="pin" type="text" [(ngModel)]="userdetails.user_pincode" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Emp_type</label>
+            <input formControlName="emp_type" type="text" [(ngModel)]="userdetails.user_employement_type" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Salary</label>
+            <input formControlName="salary" type="text" [(ngModel)]="userdetails.user_salary" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Aadhar Number</label>
+            <input formControlName="aadhar" type="text" [(ngModel)]="userdetails.user_adhar_no" class="form-control">
+        </div>
+        <div class="form-group"> <!-- form-group and form-control are bootstrap classes -->
+            <label>User Pan card</label>
+            <input formControlName="pan" type="text" [(ngModel)]="userdetails.user_pan_no" class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+</div>

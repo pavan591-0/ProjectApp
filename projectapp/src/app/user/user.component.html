@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-center">Get Users</h1>
+    <button (click)="Initial()"type="button" class="btn btn-danger text-center">Clear</button>&nbsp;
+    <button (click)="getUsers()"  type="button" class="btn btn-primary">Get Users</button>
+    <div class="card">
+        <div class="card-body">
+            <div>
+            <table class="table" *ngIf = "isVisible">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Aadhar</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor ="let u of users">
+                    <tr class="bg-primary">
+                        <td class="bg-primary">{{u.user_full_Name}}</td>
+                        <td class="bg-primary">{{u.user_email}}</td>
+                        <td class="bg-primary">{{u.user_adhar_no}}</td>
+                        <td>
+                            <button (click)="deleteUser(u.user_email)"  type="button" class="btn fa fa-times"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+
